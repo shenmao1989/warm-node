@@ -2,3 +2,4 @@
 *.ipr
 .idea/
 npm-debug.log
+test.log

@@ -6,6 +6,8 @@ var dht = new DHT.DHT(51414);
 // for bootstrapping you need to know a node which already is in the dht
 dht.start();
 dht.bootstrap([
+    { 'address': '67.215.242.138', 'port': 6881},//router.bittorrent.com:6881
+    { 'address': '67.215.242.139', 'port': 6881},//router.bittorrent.com:6881
     { 'address': '91.121.60.42', 'port': 6881},//dht.transmissionbt.com:6881
     { 'address': '124.238.9.183', 'port': 54312},
     { 'address': '31.170.186.124', 'port': 43180},

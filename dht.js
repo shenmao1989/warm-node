@@ -35,7 +35,7 @@ var DHT = require('dht');
 for(var i = 0; i < 200; i++){
     var dht = new DHT.DHT(51414 + i);
 
-    DHT.debug = false;
+//    DHT.debug = false;
 
     // for bootstrapping you need to know a node which already is in the dht
     dht.start();

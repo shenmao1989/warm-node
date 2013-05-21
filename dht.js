@@ -32,7 +32,7 @@ var routers = [
     { 'address': '14.138.42.185', 'port': 49696}
 ]
 var DHT = require('dht');
-for(var i = 0; i < 200; i++){
+for(var i = 0; i < 2; i++){
     var dht = new DHT.DHT(51414 + i);
 
 //    DHT.debug = false;

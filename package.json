@@ -1,4 +1,5 @@
 {
     "name": "warm-node",
-    "private": true
+    "private": true,
+    "description": ""
 }

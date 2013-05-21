@@ -1,5 +1,6 @@
 {
     "name": "warm-node",
     "private": true,
-    "description": ""
+    "description": "warm-node",
+    "dependencies": {}
 }

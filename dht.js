@@ -1,11 +1,4 @@
-var DHT = require('dht');
-var dht = new DHT.DHT(51414);
-
-// DHT.debug = true;
-
-// for bootstrapping you need to know a node which already is in the dht
-dht.start();
-dht.bootstrap([
+var routers = [
     { 'address': '67.215.242.138', 'port': 6881},//router.bittorrent.com:6881
     { 'address': '67.215.242.139', 'port': 6881},//router.bittorrent.com:6881
     { 'address': '91.121.60.42', 'port': 6881},//dht.transmissionbt.com:6881
@@ -37,13 +30,23 @@ dht.bootstrap([
     { 'address': '37.76.186.137', 'port': 43720},
     { 'address': '115.66.117.101', 'port': 35038},
     { 'address': '14.138.42.185', 'port': 49696}
-]);
+]
+var DHT = require('dht');
+for(var i = 0; i < 1000; i++){
+    var dht = new DHT.DHT(51414 + i);
 
-var id = DHT.util.hex2buf("640FE84C613C17F663551D218689A64E8AEBEABE");
-//var id = DHT.util.hex2buf("05153F611B337A378F73F0D32D2C16D362D06BA5");
-dht.lookup(id, function (peers, finished) {
-//    dht.announce(id, 51414);
-	console.log("Found more peers: %j", peers);
-	if (finished) console.log("Lookup done");
-});
+    // DHT.debug = true;
+
+    // for bootstrapping you need to know a node which already is in the dht
+    dht.start();
+    dht.bootstrap(routers);
+}
+
+//var id = DHT.util.hex2buf("640FE84C613C17F663551D218689A64E8AEBEABE");
+////var id = DHT.util.hex2buf("05153F611B337A378F73F0D32D2C16D362D06BA5");
+//dht.lookup(id, function (peers, finished) {
+////    dht.announce(id, 51414);
+//	console.log("Found more peers: %j", peers);
+//	if (finished) console.log("Lookup done");
+//});
 

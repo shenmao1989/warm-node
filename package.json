@@ -1,6 +1,7 @@
 {
     "name": "warm-node",
     "private": true,
-    "description": "warm-node",
+    "description": "warm-node server",
+    "author": "",
     "dependencies": {}
 }
